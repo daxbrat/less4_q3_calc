@@ -1,0 +1,72 @@
+#include "std_lib_facilities.h"
+
+vector<string>string_vals{ "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+vector<int>int_vals{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+bool found = false;
+
+string get_val()
+{
+	cout << "Enter a single digit or spell it out: ";
+	string num{};
+	cin >> num;
+	return num;
+
+	// Check if the input is a spelled-out number
+	for (size_t i = 0; i < string_vals.size(); ++i) {
+		if (num == string_vals[i]) {
+			found = true;
+			return num;
+		}
+
+		if (!found) {
+			cout << "Invalid input." << '\n';
+		}
+	}
+}
+
+char get_sign() {
+	cout << "Enter one of the following: +, -, *, or /: ";
+	char sign{};
+	cin >> sign;
+	return sign;
+}
+
+void calc(string val1, string val2, char sign)
+{
+	switch (sign)
+	{
+	case '+':
+		cout << val1 << " " << sign << " " << val2 << " is " << val1 + val2;
+		break;
+	case '-':
+		cout << val1 << " " << sign << " " << val2 << " is " << val1 - val2;
+		break;
+	case '*':
+		cout << val1 << " " << sign << " " << val2 << " is " << val1 * val2;
+		break;
+	case '/':
+		cout << val1 << " " << sign << " " << val2 << " is " << val1 / val2;
+		break;
+	default:
+		std::cout << "";
+	}
+}
+
+int main()
+{
+	
+	
+	string val1{ get_val() };
+	string val2{ get_val() };
+
+	char sign{ get_sign()};
+
+	calc(val1, val2, sign);
+
+	
+
+	
+
+
+	return 0;
+}
