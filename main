@@ -31,7 +31,7 @@ char get_sign() {
 	return sign;
 }
 
-void calc(string val1, string val2, char sign)
+void calc(int val1, int val2, char sign)
 {
 	switch (sign)
 	{
@@ -55,18 +55,15 @@ void calc(string val1, string val2, char sign)
 int main()
 {
 	
-	
 	string val1{ get_val() };
 	string val2{ get_val() };
 
+	int num1 = stoi(val1);
+	int num2 = stoi(val2);
+
 	char sign{ get_sign()};
 
-	calc(val1, val2, sign);
-
-	
-
-	
-
+	calc(num1, num2, sign);
 
 	return 0;
 }
