@@ -40,9 +40,9 @@ int main()
             cout << "Invalid input." << '\n';
         }
         // ---------------Enter sign----------------------------
-        std::cout << "Enter one of the following: +, -, *, or /: ";
+        cout << "Enter one of the following: +, -, *, or /: ";
         char sign{};
-        std::cin >> sign;
+        cin >> sign;
         // ---------------------------------------------------------------
 
         cout << "Enter another digit or spell it out: " << '\n';
@@ -80,19 +80,19 @@ int main()
         switch (sign)
         {
         case '+':
-            std::cout << num1 << " " << sign << " " << num2 << " is " << num1 + num2;
+            cout << num1 << " " << sign << " " << num2 << " is " << num1 + num2;
             break;
         case '-':
-            std::cout << num1 << " " << sign << " " << num2 << " is " << num1 - num2;
+            cout << num1 << " " << sign << " " << num2 << " is " << num1 - num2;
             break;
         case '*':
-            std::cout << num1 << " " << sign << " " << num2 << " is " << num1 * num2;
+            cout << num1 << " " << sign << " " << num2 << " is " << num1 * num2;
             break;
         case '/':
-            std::cout << num1 << " " << sign << " " << num2 << " is " << num1 / num2;
+            cout << num1 << " " << sign << " " << num2 << " is " << num1 / num2;
             break;
         default:
-            std::cout << "";
+            cout << "";
         }
     
 
