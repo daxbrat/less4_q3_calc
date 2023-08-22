@@ -49,7 +49,7 @@ int main()
 
         string word_digit2{};
         cin >> word_digit2;
-        bool found = false;
+        found = false;
 
         // Check if the input is a spelled-out number
         for (size_t i = 0; i < string_vals.size(); ++i) {
@@ -66,7 +66,7 @@ int main()
             for (size_t i = 0; i < int_vals.size(); ++i) {
                 if (word_digit2 == to_string(int_vals[i])) {
                     //cout << string_vals[i] << '\n';
-                    num2 = stoi(word_digit);
+                    num2 = stoi(word_digit2);
                     found = true;
                     break;
                 }
